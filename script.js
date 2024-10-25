@@ -254,6 +254,34 @@ function clearHighlights() {
         square.style.border = '';
     });
 }
+function resetGame() {
+    // Clear the move history
+    moveStack = [];
+
+    // Reset the board to the initial state
+    board = [
+        ['r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'],
+        ['p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'],
+        ['', '', '', '', '', '', '', ''],
+        ['', '', '', '', '', '', '', ''],
+        ['', '', '', '', '', '', '', ''],
+        ['', '', '', '', '', '', '', ''],
+        ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'],
+        ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R']
+    ];
+
+    // Reset the current turn to white
+    currentTurn = 'white';
+
+    // Re-render the chessboard
+    initChessboard();
+
+    // Update the turn display
+    document.getElementById('turnDisplay').textContent = "White's Turn";
+}
+
+// Add the event listener for the reset button
+document.getElementById('resetBtn').addEventListener('click', resetGame);
 
 // Initialize the game on load
 initChessboard();

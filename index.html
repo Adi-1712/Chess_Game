@@ -7,11 +7,43 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Chess</h1>
-   
-    <div id="chessboard" class="chessboard"></div>
+    <h1>Chess Game</h1>
     <div id="turnDisplay">White's Turn</div>
-    <button id="undoBtn">Undo Move</button>
-    <script src="script.js"></script>
+    <div class="chessboard-wrapper">
+        <!-- Rank labels (1-8) -->
+        <div class="label rank" style="--rank: 1;">1</div>
+        <div class="label rank" style="--rank: 2;">2</div>
+        <div class="label rank" style="--rank: 3;">3</div>
+        <div class="label rank" style="--rank: 4;">4</div>
+        <div class="label rank" style="--rank: 5;">5</div>
+        <div class="label rank" style="--rank: 6;">6</div>
+        <div class="label rank" style="--rank: 7;">7</div>
+        <div class="label rank" style="--rank: 8;">8</div>
+
+        <!-- Chessboard -->
+        <div class="chessboard" id="chessboard">
+            <!-- You will add your chessboard squares here dynamically using JavaScript if needed -->
+        </div>
+
+        <!-- File labels (a-h) -->
+        <div class="label file" style="--file: 0;">a</div>
+        <div class="label file" style="--file: 1;">b</div>
+        <div class="label file" style="--file: 2;">c</div>
+        <div class="label file" style="--file: 3;">d</div>
+        <div class="label file" style="--file: 4;">e</div>
+        <div class="label file" style="--file: 5;">f</div>
+        <div class="label file" style="--file: 6;">g</div>
+        <div class="label file" style="--file: 7;">h</div>
+    </div>
+
+    
+
+    <!-- Buttons container -->
+    <div class="button-container">
+        <button id="undoBtn">Undo Move</button>
+        <button id="resetBtn">Reset</button>
+    </div>
+
+    <script src="script.js"></script> 
 </body>
 </html>
